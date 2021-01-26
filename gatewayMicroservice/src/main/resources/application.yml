@@ -6,4 +6,9 @@ spring:
       - id: r1
         uri: lb://SCORE-SERVICE
         predicates:
-        - Path= /api/result
+        - Path= /api/result/**
+      - id: r2
+        uri: http://localhost:8000
+        predicates:
+        - Path= /api/result/**
+                  
