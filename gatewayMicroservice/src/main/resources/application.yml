@@ -1,0 +1,9 @@
+#uri: http://localhost:8082
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: r1
+        uri: lb://SCORE-SERVICE
+        predicates:
+        - Path= /api/result
